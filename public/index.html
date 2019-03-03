@@ -1,0 +1,37 @@
+<html>
+	<head>
+		<script src="//cdn.jsdelivr.net/npm/phaser@3.16.2/dist/phaser.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.1/underscore-min.js"></script>
+		<script src="CustomPipeline.js"></script>
+		<script src="TestScene.js"></script>
+		<script src="Highlighter.js"></script>
+		<style>
+			canvas{
+				border:1px solid #999;
+				transform: scale(0.6);
+    			transform-origin: left top;
+			}
+		</style>
+	</head>
+	<body>
+		<script>
+			const config = {
+			    type: Phaser.WEBGL,
+			    width: 1024,
+			    height: 768,
+			    scene: [TestScene],
+			    physics: {
+                    default: 'arcade',
+                    arcade: {
+                        gravity: {
+                            y: 10
+                        },
+                        debug: true
+                    }
+                }
+			};
+			new Phaser.Game(config);
+
+		</script>
+	</body>
+</html>
